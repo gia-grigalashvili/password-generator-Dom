@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Chivo:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="header">Password Generator</h3>
+      <div id="copypass">
+        <h2 class="password"></h2>
+        <div class="copy">
+          <span class="copied" style="display: none">COPIED</span>
+          <img
+            src="starter-code/assets/images/icon-copy.svg"
+            alt="icon-copy"
+            class="copied-img"
+            onclick="copied()"
+          />
+        </div>
+      </div>
+
+      <div class="main-cont">
+        <div class="slider-cont">
+          <div class="slider-text">
+            <span>Character Length</span>
+            <p class="slider-value">0</p>
+          </div>
+          <div class="slider1">
+            <input
+              type="range"
+              min="0"
+              max="20"
+              value="0"
+              class="slider"
+              id="passLength"
+            />
+          </div>
+        </div>
+        <div class="checkbox-cont">
+          <div class="checkbox">
+            <label class="container">
+              <input type="checkbox" class="check uppercase" />
+              <span class="checkmark"></span>
+            </label>
+            <span class="checkbox-text">Include Uppercase Letters</span>
+          </div>
+          <div class="checkbox">
+            <label class="container">
+              <input type="checkbox" class="check lowercase" />
+              <span class="checkmark"></span>
+            </label>
+            <span class="checkbox-text">Include Lowercase Letters</span>
+          </div>
+          <div class="checkbox">
+            <label class="container">
+              <input type="checkbox" class="check numbers" />
+              <span class="checkmark"></span>
+            </label>
+            <span class="checkbox-text">Include Numbers</span>
+          </div>
+          <div class="checkbox">
+            <label class="container">
+              <input type="checkbox" class="check symbols" />
+              <span class="checkmark"></span>
+            </label>
+            <span class="checkbox-text">Include Symbols</span>
+          </div>
+        </div>
+        <div class="strength">
+          <p>STRENGTH</p>
+          <div class="strength-lvl">
+            <span class="strength-txt"></span>
+            <div class="lvl-boxes">
+              <div class="box one"></div>
+              <div class="box two"></div>
+              <div class="box three"></div>
+              <div class="box four"></div>
+            </div>
+          </div>
+        </div>
+        <button class="generate" onclick="generate()">
+          GENERATE
+          <img
+            src="/starter-code/assets/images/icon-arrow-right.svg"
+            alt="icon-arrow-right"
+          />
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
